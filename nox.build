@@ -1,0 +1,75 @@
+project "RipSSH" {
+    version = "0.1.0"
+    description = "A foundation for a modern SSH ecosystem."
+
+    executable.d "ripssh" {
+        sources = [
+            "source/ripssh/main.d",
+            "source/ripssh/cli/dispatcher.d",
+            "source/ripssh/cli/help.d",
+            "source/ripssh/cli/commands/agent.d",
+            "source/ripssh/cli/commands/connect.d",
+            "source/ripssh/cli/commands/copy.d",
+            "source/ripssh/cli/commands/key.d",
+            "source/ripssh/cli/commands/server.d",
+            "source/ripssh/cli/commands/sftp.d",
+            "source/ripssh/cli/commands/unavailable.d",
+            "source/ripssh/build_info.d"
+        ]
+        flags = ["-Isource"]
+        install = true
+    }
+
+    executable.d "ripssh-keygen" {
+        sources = ["source/ripssh-keygen/main.d", "source/ripssh/cli/standalone.d"]
+        flags = ["-Isource"]
+        install = true
+    }
+
+    executable.d "ripssh-agent" {
+        sources = ["source/ripssh-agent/main.d", "source/ripssh/cli/standalone.d"]
+        flags = ["-Isource"]
+        install = true
+    }
+
+    executable.d "ripssh-add" {
+        sources = ["source/ripssh-add/main.d", "source/ripssh/cli/standalone.d"]
+        flags = ["-Isource"]
+        install = true
+    }
+
+    executable.d "ripssh-scp" {
+        sources = ["source/ripssh-scp/main.d", "source/ripssh/cli/standalone.d"]
+        flags = ["-Isource"]
+        install = true
+    }
+
+    executable.d "ripssh-sftp" {
+        sources = ["source/ripssh-sftp/main.d", "source/ripssh/cli/standalone.d"]
+        flags = ["-Isource"]
+        install = true
+    }
+
+    executable.d "ripsshd" {
+        sources = ["source/ripsshd/main.d", "source/ripssh/cli/standalone.d"]
+        flags = ["-Isource"]
+        install = true
+    }
+
+    executable.d "ripssh-tests" {
+        sources = [
+            "tests/main.d",
+            "source/ripssh/cli/dispatcher.d",
+            "source/ripssh/cli/help.d",
+            "source/ripssh/cli/commands/agent.d",
+            "source/ripssh/cli/commands/connect.d",
+            "source/ripssh/cli/commands/copy.d",
+            "source/ripssh/cli/commands/key.d",
+            "source/ripssh/cli/commands/server.d",
+            "source/ripssh/cli/commands/sftp.d",
+            "source/ripssh/cli/commands/unavailable.d",
+            "source/ripssh/build_info.d"
+        ]
+        flags = ["-Isource", "-unittest"]
+    }
+}
