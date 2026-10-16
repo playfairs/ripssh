@@ -9,7 +9,7 @@ void printHelp() {
     writeln("Usage: ripssh <command> [arguments]");
     writeln();
     writeln("Commands:");
-    writeln("  connect  Connect to a remote host");
+    writeln("  connect  Start a remote SSH connection");
     writeln("  key      Manage keys");
     writeln("  agent    Manage the authentication agent");
     writeln("  server   Run the SSH server");

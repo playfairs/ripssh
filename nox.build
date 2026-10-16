@@ -14,6 +14,7 @@ project "RipSSH" {
             "source/ripssh/cli/commands/server.d",
             "source/ripssh/cli/commands/sftp.d",
             "source/ripssh/cli/commands/unavailable.d",
+            "source/ripssh/transport/package.d",
             "source/ripssh/build_info.d"
         ]
         flags = ["-Isource"]
@@ -68,6 +69,7 @@ project "RipSSH" {
             "source/ripssh/cli/commands/server.d",
             "source/ripssh/cli/commands/sftp.d",
             "source/ripssh/cli/commands/unavailable.d",
+            "source/ripssh/transport/package.d",
             "source/ripssh/build_info.d"
         ]
         flags = ["-Isource", "-unittest"]
